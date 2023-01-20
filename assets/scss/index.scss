@@ -1,0 +1,20 @@
+@import './fonts';
+@import './components/Home.scss';
+@import './components/Navbar.scss';
+@import './components/InvoiceCard.scss';
+@import './components/Form.scss';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato-Regular';
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,163 @@
+.home {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  height: 100vh;
+  background-color: #131426;
+  color: white;
+
+  &-container {
+    width: 50vw;
+
+    .home-head-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-left {
+        .home-title {
+          font-family: "Lato-Bold";
+          font-size: 38px;
+        }
+
+        .total-item {
+          margin-top: 0.3rem;
+          font-size: 14px;
+        }
+      }
+
+      &-right {
+        display: flex;
+
+        .filter-status {
+          font-family: "Lato-Bold";
+          font-size: 18px;
+          background: transparent;
+          color: white;
+          border: 0;
+          margin-right: 1.5rem;
+
+          option {
+            margin: 40px;
+            color: #1f2138;
+            border: 0;
+
+            &:focus {
+              border: 0;
+            }
+          }
+
+          &:focus {
+            border: 0;
+          }
+        }
+
+        .button-add {
+          width: 180px;
+          padding: 10px 18px 10px 10px;
+          background-color: #7c5cfb;
+          font-family: "Lato-Bold";
+          font-size: 17px;
+          border-radius: 30px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+
+          &-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: white;
+            display: grid;
+            place-items: center;
+
+            i {
+              font-size: 20px;
+              color: #7c5cfb;
+              font-weight: 800 !important;
+            }
+          }
+        }
+      }
+    }
+
+    .invoice-list {
+      margin-top: 5rem;
+      max-height: 65vh;
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &.light-mode {
+    background-color: white !important;
+    color: black !important;
+
+    .filter-status {
+      color: black;
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media all and /* (min-width: 480px) and */ (max-width: 768px) {
+}
+
+@media all and (max-width: 500px) {
+  .home {
+    &-container {
+      width: 90vw;
+
+      .home-head-wrap {
+        &-left {
+          .home-title {
+            font-size: 1.5rem;
+          }
+
+          .total-item {
+            margin-top: 0.3rem;
+            font-size: 14px;
+          }
+        }
+
+        &-right {
+          .filter-status {
+            font-size: 0.8rem;
+            margin-right: 1rem;
+
+            option {
+              margin: 20px;
+            }
+          }
+
+          .button-add {
+            width: 83px;
+            padding: 5px 10px 5px 5px;
+            font-size: 14px;
+
+            &-icon {
+              width: 29px;
+              height: 29px;
+
+              i {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+
+      .invoice-list {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
