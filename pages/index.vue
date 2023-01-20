@@ -4,7 +4,8 @@
       <div class="home-head-wrap">
         <div class="home-head-wrap-left">
           <p class="home-title">Invoices</p>
-          <p class="total-item">{{ isMobile ? `${homeStore.listInvoice.length} invoices` : `There are ${homeStore.listInvoice.length} total invoices` }}</p>
+          <p class="total-item desktop">There are {{ homeStore.listInvoice.length }} total invoices</p>
+          <p class="total-item mobile">{{homeStore.listInvoice.length}} invoices</p>
         </div>
         <div class="home-head-wrap-right">
           <select v-model="filter" @change="homeStore.filterInvoice(filter)" name="filter" class="filter-status">
@@ -13,11 +14,17 @@
             <option value="pending">Pending</option>
             <option value="paid">Paid</option>
           </select>
-          <div @click="homeStore.setShowForm()" class="button-add">
+          <div @click="homeStore.setShowForm()" class="button-add desktop">
             <div class="button-add-icon">
               <i class="material-icons">add</i>
             </div>
-            {{ isMobile ? 'New' : 'New Invoice' }}
+            New Invoice
+          </div>
+          <div @click="homeStore.setShowForm()" class="button-add mobile">
+            <div class="button-add-icon">
+              <i class="material-icons">add</i>
+            </div>
+            New
           </div>
         </div>
       </div>
